@@ -1,0 +1,189 @@
+/* font-family: 'Comfortaa', cursive;
+font-family: 'Jura', sans-serif;
+font-family: 'Poiret One', cursive; */
+
+body, h1, h4, p, ul {
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+}
+
+.weather-list {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/main_back.jpg) no-repeat center top;
+    z-index: -1;
+}
+
+.weather-box {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 800px;
+}
+
+.back-weather {
+    position: absolute;
+    background-color: gray;
+    width: 1200px;
+    height: 800px;
+    z-index: -1;
+    border-radius: 20px;
+    opacity: 80%;
+    box-shadow: 0 0 3px 3px gray;
+}
+
+.weather-info {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.days-of-week {
+    display: flex;
+    height: 200px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid transparent;
+    border-image: linear-gradient(transparent, #fff, #fff, transparent);
+    border-image-slice: 1;
+    width: 140px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.day h4,
+.day p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.now {
+    flex-direction: row;
+    border-left: none;
+    flex-grow: 1;
+}
+.now div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 140px;
+}
+
+.cloudy {
+    width: 70px;
+    height: 70px;
+    background: url(../img/cloudy.png) no-repeat center;
+    background-size: cover;
+}
+.now .cloudy {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background: none;
+    bottom: 50px;
+    right: 30px;
+    /* background: url(../img/cloudy_rain.com.png) no-repeat center;
+    background-size: cover; */
+}
+.now h1 {
+    font-size: 100px;
+}
+.now .sky {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.now h4 {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.info-block {
+    display: flex;
+    height: 580px;
+    border-top: transparent solid 10px;
+    border-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
+    border-image-slice: 1;
+    margin-top: 10px;
+    /* gap: 300px; */
+}
+.info-block-back {
+    position: absolute;
+    width: 1200px;
+    height: 580px;
+    background: linear-gradient(rgba(94, 94, 94, 0.6), rgba(94, 94, 94, 0.6)), url(../img/back_in_block.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.expand-info {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.city h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.now-date {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.city {
+    border-bottom: solid 1px transparent;
+    border-image: linear-gradient(to right, transparent, #fff, #fff, #fff, transparent);
+    border-image-slice: 1;
+}
+.expand-temp {
+    margin: 10px 0 10px 20px;
+    width: 350px;
+    font-weight: 600;
+}
+.expand-other {
+    padding-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    border-top: transparent 1px solid;
+    border-image: linear-gradient(to right, transparent, #fff, #fff, #fff, transparent);
+    border-image-slice: 1;
+    gap: 40px;
+}
+.expand-temp p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.expand-temp .sky {
+    text-transform: uppercase;
+}
+
+.info {
+    align-self: end;
+    flex-grow: 1;
+    text-align: end;
+    padding: 10px;
+}
+.title,
+.value {
+    list-style-type: none;
+    padding: 0;
+}

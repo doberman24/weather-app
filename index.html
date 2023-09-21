@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Jura:wght@400;500;700&family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+    <main class="weather-list">
+        <section class="background"></section>
+        <section class="weather-box">
+            <div class="back-weather"></div>
+            <div class="weather-info">
+                <div class="days-of-week">
+                    <div class="day mon now">
+                        <div class="main-temp">
+                            <h1 class="temperature">25°</h1>
+                            <h4>ПН / 18 сен</h4>
+                        </div>
+                        <div class="main-weath">
+                            <p class="cloudy"></p>
+                            <p class="sky">облачно</p>
+                        </div>                        
+                    </div>
+                    <span class="day tue">
+                        <h4>ВТ</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">25°</p>
+                    </span>
+                    <span class="day wed">
+                        <h4>СР</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">15°</p>
+                    </span>
+                    <span class="day thu">
+                        <h4>ЧТ</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">17°</p>
+                    </span>
+                    <span class="day fri">
+                        <h4>ПТ</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">23°</p>
+                    </span>
+                    <span class="day sat">
+                        <h4>СБ</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">19°</p>
+                    </span>
+                    <span class="day san">
+                        <h4>ВС</h4>
+                        <p class="cloudy"></p>
+                        <p class="tempera">10°</p>
+                    </span>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-back"></div>
+                    <div class="expand-info">
+                        <div class="city">
+                            <h1>Санкт-петербург</h1>
+                            <p class="now-date">17:21 Понедельник 18 сентября</p>
+                        </div>
+                        <div class="expand-temp">
+                            <h1 class="temperature">25°C</h1>
+                            <p class="sky">Облачно с прояснениями, кратковременные дожди</p>
+                            <p>Ощущается как <output class="feels"></output>°C</p>
+                        </div>
+                        <div class="expand-other">
+                            <ul class="title">
+                                <li>Влажность:</li>
+                                <li>Давление:</li>
+                                <li>Вероятность осадков:</li>
+                                <li>Ветер</li>
+                            </ul>
+                            <ul class="value">
+                                <li>67%</li>
+                                <li><output class="pressure"></output> мм рт.ст.</li>
+                                <li>73%</li>
+                                <li>Ю 2 м/с</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <footer class="info">
+                        <p class="get-date-info">Получено c <b>openweathermap.org</b> </p>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
