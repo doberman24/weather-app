@@ -51,23 +51,30 @@ body, h1, h4, p, ul {
     height: 200px;
 }
 
-.day {
+.day,
+.now {
     display: flex;
     flex-direction: column;
     border-left: 2px solid transparent;
     border-image: linear-gradient(transparent, #fff, #fff, transparent);
     border-image-slice: 1;
-    width: 140px;
+    width: 168px;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 .day h4,
-.day p {
+.day p,
+.now p {
     font-size: 20px;
     font-weight: 700;
 }
 
+.now .main-temp,
+.now .main-weath {
+    width: 50%;
+    gap: 15px;
+}
 .now {
     flex-direction: row;
     border-left: none;
@@ -81,22 +88,32 @@ body, h1, h4, p, ul {
     width: 140px;
 }
 
+
 .cloudy {
+    position: relative;
     width: 70px;
     height: 70px;
-    background: url(../img/cloudy.png) no-repeat center;
-    background-size: cover;
 }
 .now .cloudy {
     position: relative;
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     background: none;
-    bottom: 50px;
-    right: 30px;
-    /* background: url(../img/cloudy_rain.com.png) no-repeat center;
-    background-size: cover; */
+    overflow: hidden;
 }
+.cloudy img {
+    position: absolute;
+    margin: -15px -15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.now .cloudy img {
+    position: absolute;
+    margin: -25px -25px;
+}
+
 .now h1 {
     font-size: 100px;
 }
