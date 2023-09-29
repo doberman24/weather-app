@@ -2,7 +2,8 @@
 font-family: 'Jura', sans-serif;
 font-family: 'Poiret One', cursive; */
 
-body, h1, h4, p, ul {
+body, h1, h4, p, ul,
+button, input {
     margin: 0;
     font-family: 'Poiret One', cursive;
 }
@@ -58,21 +59,24 @@ body, h1, h4, p, ul {
     border-left: 2px solid transparent;
     border-image: linear-gradient(transparent, #fff, #fff, transparent);
     border-image-slice: 1;
-    width: 168px;
+    width: 190px;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 .day h4,
 .day p,
 .now p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
+}
+.day .d {
+    margin-top: 5px;
 }
 
 .now .main-temp,
 .now .main-weath {
-    width: 50%;
+    width: 40%;
     gap: 15px;
 }
 .now {
@@ -88,16 +92,18 @@ body, h1, h4, p, ul {
     width: 140px;
 }
 
-
 .cloudy {
     position: relative;
     width: 70px;
     height: 70px;
 }
+.day .tempera {
+    font-size: 25px;
+}
 .now .cloudy {
     position: relative;
     width: 150px;
-    height: 150px;
+    height: 120px;
     background: none;
     overflow: hidden;
 }
@@ -111,7 +117,7 @@ body, h1, h4, p, ul {
 }
 .now .cloudy img {
     position: absolute;
-    margin: -25px -25px;
+    margin: -40px -25px;
 }
 
 .now h1 {
@@ -145,7 +151,8 @@ body, h1, h4, p, ul {
     border-radius: 20px;
 }
 
-.expand-info {
+.expand-info,
+.find {
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -193,11 +200,49 @@ body, h1, h4, p, ul {
     text-transform: uppercase;
 }
 
-.info {
-    align-self: end;
+.find {
+    align-items: end;
+    justify-content: space-between;
     flex-grow: 1;
+    height: 540px;
+    margin-top: 30px;
+}
+.find-city {
+    display: flex;
+    text-align: center;
+    width: fit-content;
+    border: solid 3px gray;
+    margin-right: 20px;
+    border-radius: 12px;
+}
+input::placeholder {
+    opacity: 50%;
+    color: #fff;
+}
+.find-city input {
+    width: 400px;
+    background: transparent;
+}
+.find-city button {
+    width: 50px;
+    background-color: gray;
+    cursor: pointer;
+}
+.find-city input,
+.find-city button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.find-city button:active {
+    background: #575757;
+}
+.get-date-info {
     text-align: end;
-    padding: 10px;
+    padding-right: 10px;
 }
 .title,
 .value {
