@@ -18,7 +18,7 @@ const pop = document.querySelector('.pop');
 
 // let find_city = 'Санкт-Петербург';
 
-weather_sky_ru = {
+const weather_sky_ru = {
     Clouds: 'Облачно',
     Clear: 'Ясно',
     Thunderstorm: 'Гроза',
@@ -34,7 +34,7 @@ weather_sky_ru = {
     Ash: 'Пепел',
     Squall: 'Шквал',
     Tornado: 'Торнадо'
-}
+};
 
 const get_current_place = () => {
     fetch('http://ip-api.com/json/?lang=ru')
@@ -67,6 +67,7 @@ document.addEventListener('keydown', (evt) => {
 
 //Вычисление направления ветра
 function direction(deg) {
+    let wind_direction = '';
     if (deg >= 6 && deg < 86) {
         wind_direction = 'СЗ';
     } else if (deg >= 86 && deg < 96) {
@@ -96,6 +97,7 @@ const out_info = (data) => {
     //Выводим инфу об облачности:
     cloudy_img.innerHTML = '<img src="https://openweathermap.org/img/wn/' + data.weather[0].icon + '@4x.png">' //иконка
     short_sky.textContent = weather_sky_ru[data.weather[0].main]; //короткое описание с переводом на русский язык
+    get_main_back(data.weather[0].main);
     description.textContent = data.weather[0].description; //полное описание состояния погоды
     wing.textContent = `${data.wind.speed} м/с ${direction(data.wind.deg)}`; //Вывод направления ветра
 }
@@ -141,6 +143,8 @@ const four_day_data = (find_city) => {
         .then(data => {
             // console.log(data);
 
+            get_picture(data.city.name);
+
             pop.textContent = Math.round(data.list[0].pop * 100) + '%';
 
             let count_day = 1;
@@ -172,4 +176,29 @@ const four_day_data = (find_city) => {
         .catch(if_error => console.log(if_error));
 }
 
-//https://api.unsplash.com/search/photos?client_id=VEJHd0OxvPZ6hmkTrgdUFxYAe4BPpUWZqkQuaWq-wWA&query=Moscow
+const get_picture = (city) => {
+    fetch(`https://api.unsplash.com/search/photos?client_id=VEJHd0OxvPZ6hmkTrgdUFxYAe4BPpUWZqkQuaWq-wWA&query=${city}`)
+    .then(response => response.json())
+    .then(data => {
+        set_picture_back(data.results);
+    })
+    .catch(if_error => console.log(if_error));
+}
+
+const set_picture_back = (picture) => {
+    picture = picture[get_rand_element(picture)].urls.regular;
+    const back = document.querySelector('.info-block-back');
+    back.style.background = `linear-gradient(#5e5e5e99, #5e5e5e99), url(${picture}) no-repeat center`;
+    back.style.backgroundSize = 'cover';
+}
+
+const get_rand_element = (elements) => {
+    let element = Math.floor(Math.random() * elements.length);
+    return element;
+}
+
+const get_main_back = (weather) => {
+    const main_back = document.querySelector('.background');
+    main_back.style.background = `url(../img/${weather}.jpg) no-repeat center top`;
+    main_back.style.backgroundSize = 'cover';
+}

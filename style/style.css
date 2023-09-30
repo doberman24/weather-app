@@ -21,6 +21,8 @@ button, input {
     width: 100vw;
     height: 100vh;
     background: url(../img/main_back.jpg) no-repeat center top;
+    background-size: cover;
+    filter: blur(5px);
     z-index: -1;
 }
 
@@ -145,7 +147,7 @@ button, input {
     position: absolute;
     width: 1200px;
     height: 580px;
-    background: linear-gradient(rgba(94, 94, 94, 0.6), rgba(94, 94, 94, 0.6)), url(../img/back_in_block.jpg) no-repeat center;
+    background: linear-gradient(#5e5e5e99, #5e5e5e99), url(../img/back_in_block.jpg) no-repeat center;
     background-size: cover;
     z-index: -1;
     border-radius: 20px;
@@ -248,4 +250,122 @@ input::placeholder {
 .value {
     list-style-type: none;
     padding: 0;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+    .weather-box {
+        width: 1000px;
+        height: 600px;
+    }
+    .back-weather {
+        width: 1000px;
+        height: 600px;
+        border-radius: 15px;
+    }
+    
+    .days-of-week {
+        height: 150px;
+    }
+    .now h1 {
+        font-size: 75px;
+    }
+    .now .sky {
+        font-size: 16px;
+    }
+    .now h4 {
+        font-size: 18px;
+    }
+    .now .main-weath {
+        gap: 12px;
+    }
+    .now .cloudy {
+        width: 130px;
+        height: 90px;
+    }
+    .now .cloudy img {
+        transform: scale(0.8);
+        margin: -60px -35px;
+    }
+
+    .day h4,
+    .day p {
+        font-size: 15px;
+    }
+    .day {
+        width: 170px;
+    }
+    .day .tempera {
+        font-size: 22px;
+    }
+    .cloudy {
+        width: 50px;
+        height: 50px;
+    }
+    .cloudy img {
+        transform: scale(0.7);
+        margin: -25px -25px;
+    }
+    
+    .info-block {
+        height: 430px;
+        margin-top: 5px;
+    }
+    .info-block-back {
+        width: 1000px;
+        height: 435px;
+        border-radius: 15px;
+    }
+    .expand-info,
+    .find {
+        width: 500px;
+        height: 390px;
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+    .city h1{
+        font-size: 45px;
+        padding-left: 15px;
+    }
+    .now-date {
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    .expand-temp {
+        margin: 10px 0 10px 15px;
+        width: 320px;
+    }
+    .expand-temp p {
+        font-size: 19px;
+    }
+    .expand-other {
+        padding-left: 15px;
+        font-size: 22px;
+        gap: 30px;
+    }
+    .find {
+        height: 410px;
+        margin-top: 20px;
+    }
+    .find-city {
+        border: solid 2px gray;
+        margin-right: 15px;
+        border-radius: 8px;
+    }
+    .find-city input {
+        width: 320px;
+    }
+    .find-city button {
+        width: 40px;
+    }
+    .find-city input,
+    .find-city button {
+        font-size: 24px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .get-date-info {
+        padding-right: 7px;
+    }
+    
+
 }
