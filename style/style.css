@@ -1,7 +1,3 @@
-/* font-family: 'Comfortaa', cursive;
-font-family: 'Jura', sans-serif;
-font-family: 'Poiret One', cursive; */
-
 body, h1, h4, p, ul,
 button, input {
     margin: 0;
@@ -141,7 +137,6 @@ button, input {
     border-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
     border-image-slice: 1;
     margin-top: 10px;
-    /* gap: 300px; */
 }
 .info-block-back {
     position: absolute;
@@ -366,6 +361,318 @@ input::placeholder {
     .get-date-info {
         padding-right: 7px;
     }
-    
+}
 
+@media screen and (min-width: 550px) and (max-width: 1200px) {
+    .weather-box {
+        width: 600px;
+        height: 220px;
+    }
+    .back-weather {
+        width: 600px;
+        height: 220px;
+        border-radius: 7px;
+    }
+    
+    .days-of-week {
+        height: 50px;
+    }
+    .now h1 {
+        font-size: 40px;
+    }
+    .now .sky {
+        font-size: 10px;
+    }
+    .now h4 {
+        font-size: 11px;
+        margin-top: -4px;
+    }
+    .now .main-weath {
+        gap: 0
+    }
+
+    .now .main-temp {
+        gap: 0;
+    }
+    .now .cloudy {
+        width: 70px;
+        height: 42px;
+    }
+    .now .cloudy img {
+        transform: scale(0.4);
+        margin: -78px -63px;
+    }
+    .day,
+    .now {
+        border-left-width: 1px;
+    }
+    .day h4 {
+        font-size: 11px;
+        align-self: flex-end;
+        text-align: center;
+        width: 50px;
+        margin-top: 2px !important;
+    }
+    .day p {
+        font-size: 9px;
+    }
+    .day {
+        width: 110px;
+        gap: 0;
+    }
+    .day .tempera {
+        font-size: 20px;
+        margin-top: 3px;
+        align-self: flex-end;
+        width: 50px;
+        text-align: center;
+    }
+    .cloudy {
+        width: 50px;
+        align-self: flex-start;
+    }
+    .cloudy img {
+        transform: scale(0.7);
+        margin: -47px -20px;
+    }
+    
+    .info-block {
+        height: 162px;
+        margin-top: 5px;
+        border-top-width: 3px;
+    }
+    .info-block-back {
+        width: 600px;
+        height: 162px;
+        border-radius: 7px;
+    }
+    .expand-info,
+    .find {
+        position: relative;
+        width: 300px;
+        height: 156px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .city h1{
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .now-date {
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .expand-temp {
+        margin: 3px 0 3px 5px;
+        width: 250px;
+    }
+    .expand-temp .temperature {
+        display: inline-block;
+        width: 30px;
+    }
+    .expand-temp p {
+        font-size: 13px;
+    }
+    .expand-other {
+        position: absolute;
+        width: 250px;
+        top: 65px;
+        left: 300px;
+        padding-left: 5px;
+        font-size: 15px;
+        gap: 15px;
+    }
+    .find-city {
+        border: solid 1px gray;
+        margin-right: 5px;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+    .find-city input {
+        width: 200px;
+    }
+    .find-city button {
+        width: 30px;
+    }
+    .find-city input,
+    .find-city button {
+        font-size: 14px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 2px;
+    }
+    .get-date-info {
+        padding-right: 7px;
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 550px) {
+    .weather-box {
+        width: 330px;
+        height: 520px;
+    }
+    .back-weather {
+        width: 330px;
+        height: 520px;
+        border-radius: 10px;
+    }
+    
+    .days-of-week {
+        flex-direction: column;
+        height: 127px;
+        gap: 10px;
+    }
+    .now {
+        width: 260px;
+        gap: 10px;
+        border-right: solid 3px transparent;
+        border-image: linear-gradient(transparent, #fff, #fff, transparent);
+        border-image-slice: 1;
+        padding-bottom: 6px;
+    }
+    .now h1 {
+        font-size: 90px;
+        margin-top: -10px;
+    }
+    .now .sky {
+        font-size: 16px;
+    }
+    .now h4 {
+        font-size: 18px;
+    }
+    .now .main-temp {
+        gap: 0;
+    }
+    .now .main-weath {
+        gap: 12px;
+    }
+    .now .cloudy {
+        width: 130px;
+        height: 90px;
+    }
+    .now .cloudy img {
+        transform: scale(0.8);
+        margin: -60px -35px;
+    }
+
+    .day h4,
+    .day p {
+        font-size: 12px;
+    }
+    .day {
+        position: relative;
+        bottom: 124px;
+        width: 70px;
+        align-self: flex-end;
+        border-left: none;
+        border-bottom: solid 1px transparent;
+        border-image: linear-gradient(to right, transparent, #fff, transparent);
+        border-image-slice: 1;
+        padding-bottom: 15px;    
+        gap: 0;
+    }
+    .day-4 {
+        border: none;
+    }
+    .day .tempera {
+        font-size: 19px;
+    }
+    .cloudy {
+        width: 50px;
+        height: 50px;
+    }
+    .cloudy img {
+        transform: scale(0.6);
+        margin: -25px -25px;
+    }
+    
+    .info-block {
+        display: flex;
+        flex-direction: column;
+        height: 383px;
+        width: 263px;
+        margin-right: 0;
+        margin-top: 0;
+        border-top: transparent solid 10px;
+        border-image: linear-gradient(to right, transparent, #fff, #fff, transparent);
+        border-image-slice: 1;
+    }
+    .info-block-back {
+        width: 260px;
+        height: 383px;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-right: solid 3px transparent;
+        border-image: linear-gradient(transparent, #fff, #fff, #fff, transparent);
+        border-image-slice: 1;
+    }
+    .expand-info,
+    .find {
+        width: 260px;
+        height: 355px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .city h1{
+        font-size: 30px;
+        padding-left: 5px;
+    }
+    .now-date {
+        font-size: 19px;
+        padding-left: 5px;
+    }
+    .expand-temp {
+        margin: 10px 0;
+        width: 255px;
+        padding-left: 5px;
+    }
+    .expand-temp p {
+        font-size: 16px;
+    }
+    .expand-other {
+        padding: 5px 0 10px 5px;
+        font-size: 18px;
+        border-bottom: transparent 1px solid;
+        gap: 2px;
+    }
+    .expand-other .value li:nth-child(3),
+    .expand-other .value li:last-child {
+        position: relative;
+        top: 12px;
+    }
+    .expand-other .title li:nth-child(3) {
+        line-height: 0.9em;
+    }
+    .expand-other li {
+        padding-top: 3px;
+    }
+    .title {
+        width: 50%;
+    }
+    .find {
+        align-items: center;
+        margin-top: 15px;
+    }
+    .find-city {
+        border: solid 1px gray;
+        margin-right: 0;
+        border-radius: 6px;
+    }
+    .find-city input {
+        width: 210px;
+        height: 25px;
+    }
+    .find-city button {
+        width: 30px;
+    }
+    .find-city input,
+    .find-city button {
+        font-size: 17px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .get-date-info {
+        padding-right: 7px;
+        font-size: 10px;
+    }
 }

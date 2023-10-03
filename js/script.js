@@ -16,8 +16,6 @@ const wing = document.querySelector('.value li:last-child');
 
 const pop = document.querySelector('.pop');
 
-// let find_city = 'Санкт-Петербург';
-
 const weather_sky_ru = {
     Clouds: 'Облачно',
     Clear: 'Ясно',
@@ -130,7 +128,6 @@ const out_data_weather = (find_city) => {
                 return response.json();
         })
         .then(data => {
-            // console.log(data)
             out_info(data);
             out_date(data);
         })
@@ -141,7 +138,6 @@ const four_day_data = (find_city) => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${find_city}&appid=b831ada007b57869cb1e689b842fdb54`)
         .then(response => response.json())
         .then(data => {
-            // console.log(data);
 
             get_picture(data.city.name);
 
@@ -165,7 +161,6 @@ const four_day_data = (find_city) => {
                     const day_icon = document.querySelector(`.day-${count_day} .cloudy`);
                     count_day++;
                     
-                    // console.log(data.list[i].weather[0].description);
                     const title_weather = data.list[i].weather[0].description;
                     day_temp.textContent = Math.round(get_means_temp - 273) + '°';
                     day_icon.innerHTML = `<img title="${title_weather}" src='https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png'>`;
